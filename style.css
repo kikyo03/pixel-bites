@@ -800,10 +800,15 @@ hr {
     .category-filter {
         gap: 5px;
         margin-bottom: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .category-btn {
         padding: 6px 12px;
         font-size: 0.9rem;
+        width: calc(50% - 5px);
+        max-width: 150px;
+        text-align: center;
     }
 }
