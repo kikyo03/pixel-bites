@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Pixelify+Sans:wght@400..700&display=swap');
+
+:root {
+    --choco: #5E454B;
+    --pink: #F7E9D7;
+    --orange: #D97D7D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("/assets/yellow_polkadots_copyright.jpg");
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section {
+  min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: url("/assets/dorange_polkadots_copyright.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#header-img {
+    height: 30px;
+}
+
+#navbar {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--choco);
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+    font-family: "Pixelify Sans", sans-serif; 
+    font-size: 1.3rem;
+}
+
+.nav-link:hover {
+    background: var(--choco);
+    color: var(--pink);
+    border-radius: 50px;
+    opacity: 0.8;
+}
+
+.nav-link img  {
+    color: var(--choco);
+}
+
+.nav-link img:hover {
+    color: var(--pink);
+}
+
+.mobile-menu {
+    width: 40px;
+    display: none;
+    cursor: pointer;
+}
+
+.hero {
+    margin-top: 0;
+    height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-top: 80px;
+    gap: 200px;
+}
+
+.hero-right, .hero-left {
+    flex: 1;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.order-btn {
+    background: var(--choco);
+    color: var(--pink);
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: "Pixelify Sans", sans-serif; 
+    font-size: 1.3rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.order-btn:hover {
+    transform: scale(1.05);
+}
+
+.title h1 {
+    font-size: clamp(3rem, 1.1922rem + 5.5367vw, 4.5rem);
+    line-height: 1.1;
+    color: var(--choco);
+    font-family: "Pixelify Sans", sans-serif;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px rgba(94, 69, 75, 0.3);
+}
+
+.title p {
+    font-size: clamp(1rem, 0.4167rem + 1.2vw, 1.8rem);
+    color: var(--choco);
+    font-family: "Jersey 15", sans-serif;
+    line-height: 1.4;
+    opacity: 0.7;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-right img {
+    width: 80%;
+    max-width: 400px;
+    z-index: 1;
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: var(--choco);
+    border: none;
+    margin: 20px 0;
+}
+
+#popular {
+    padding: 40px 20px;
+    min-height: auto;
+}
+
+#popular h1 {
+    font-size: clamp(2.5rem, 1.1922rem + 3.5367vw, 2.625rem);
+    line-height: 1.2;
+    color: var(--choco);
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.popular-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.popular-bg {
+    position: absolute;
+    top: 145%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.popular-bg-image {
+    width: 1200px;
+    height: 350px;
+}
+
+.popular {
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--pink);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.popular:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.popular img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+}
+
+.image-container {
+    background-image: url("/assets/dorange_polkadots_copyright.jpg");
+    position: relative;
+    border: 3px dashed var(--choco);
+    border-radius: 8px;
+    height: 150px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto 10px auto;
+}
+
+.info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info .title {
+    font-size: 1.4rem;
+    color: var(--choco);
+    letter-spacing: 1px;
+    font-family: "Jersey 15", sans-serif;
+    margin-left: 10px;
+}
+
+.price {
+    background: var(--choco);
+    color: var(--pink);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.1rem;
+}
+
+.rating {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--pink);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: "Jersey 15", sans-serif;
+    z-index: 10;
+}
+
+.star {
+    color: #ffd700;
+}
+
+.about {
+    margin-top: 0;
+    min-height: auto;
+    padding: 155px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.about-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    gap: 100px;
+}
+
+.about-right, .about-left {
+    flex: 1;
+}
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-title h1 {
+    font-size: clamp(3rem, 1.1922rem + 5.5367vw, 3.625rem);
+    line-height: 1.1;
+    color: var(--choco);
+    font-family: "Pixelify Sans", sans-serif;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px rgba(94, 69, 75, 0.3);
+}
+
+.about-title p:first-of-type {
+    font-size: clamp(1rem, 0.4167rem + 1.2vw, 1.5rem);
+    color: var(--choco);
+    font-family: "Jersey 15", sans-serif;
+    line-height: 1.4;
+    opacity: 0.9;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.about-title p:last-of-type {
+    font-size: clamp(1rem, 0.4167rem + 1.2vw, 0.8rem);
+    color: var(--choco);
+    font-family: "Jersey 15", sans-serif;
+    line-height: 1;
+    opacity: 0.9;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.about-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-img {
+    width: 60%;
+    max-width: 400px;
+    z-index: 1;
+}
+
+.about-bg {
+    position: absolute;
+    top: 210%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.about-bg-image {
+    width: 100vw;
+    height: 400px;
+}
+
+#products {
+    padding: 40px 20px;
+    min-height: auto;
+}
+
+#products h1 {
+    font-size: clamp(2.5rem, 1.1922rem + 3.5367vw, 2.625rem);
+    line-height: 1.2;
+    color: var(--choco);
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Category Filter Styles */
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    background: var(--pink);
+    color: var(--choco);
+    border: 2px solid var(--choco);
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 400;
+}
+
+.category-btn:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.category-btn.active {
+    background: var(--choco);
+    color: var(--pink);
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.products-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.products-bg-image {
+    width: 1200px;
+    height: 350px;
+}
+
+.product {
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--pink);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.product img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+}
+
+.product.hidden {
+    display: none;
+}
+
+/* Animation for product filtering */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .hero {
+        padding: 0 15px;
+    }
+    
+    .hero-wrapper {
+        padding-top: 100px;
+    }
+    
+    .popular-container {
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .popular {
+        max-width: 300px;
+    }
+
+    .products-container {
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .product {
+        max-width: 300px;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    #navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-image: url("/assets/dorange_polkadots_copyright.jpg");
+        flex-direction: column;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-radius: 0 0 10px 10px;
+    }
+    
+    #navbar.active {
+        display: flex;
+    }
+    
+    .nav-link {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(94, 69, 75, 0.1);
+        font-size: 1.2rem;
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    .hero {
+        padding: 0 15px;
+        min-height: 100vh;
+    }
+    
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+        gap: 40px;
+    }
+    
+    .hero-left {
+        order: 1;
+        align-items: center;
+        padding-top: 60px;
+    }
+    
+    .hero-right {
+        order: 2;
+    }
+    
+    .hero-right img {
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 100px;
+    }
+    
+    .title h1 {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        line-height: 1.1;
+        letter-spacing: 1.5px;
+    }
+    
+    .title p {
+        font-size: clamp(0.9rem, 4vw, 1.5rem);
+        letter-spacing: 0.5px;
+    }
+    
+    .order-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 5rem;
+    }
+    
+    .popular-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .popular {
+        max-width: 100%;
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    hr {
+        margin: 15px 0;
+    }
+
+    .image-container {
+        margin: 20px auto 10px auto;
+    }
+
+    .popular-bg {
+        display: none;
+    }
+
+    #popular {
+        padding: 20px 15px;
+    }
+    
+    .about {
+        padding: 20px 15px;
+    }
+    
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+        gap: 30px;
+    }
+
+    .category-filter {
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+    
+    .category-btn {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+    
+    #products {
+        padding: 20px 15px;
+    }
+    
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .product {
+        max-width: 100%;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .products-bg {
+        display: none;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    #header-img {
+        height: 25px;
+    }
+    
+    .mobile-menu {
+        width: 35px;
+    }
+    
+    .hero {
+        padding: 0 10px;
+    }
+    
+    .hero-wrapper {
+        padding-top: 100px;
+        gap: 30px;
+    }
+    
+    .title h1 {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+        letter-spacing: 1px;
+    }
+    
+    .title p {
+        font-size: clamp(0.8rem, 5vw, 1.3rem);
+        letter-spacing: 0.5px;
+    }
+    
+    .order-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1.4rem;
+    }
+    
+    #popular {
+        padding: 30px 10px;
+    }
+    
+    #popular h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+    
+    .popular {
+        margin: 10px;
+    }
+    
+    .info {
+        padding: 15px;
+    }
+    
+    .info .title {
+        font-size: 25px;
+    }
+    
+    .price {
+        padding: 6px 12px;
+        font-size: 15px;
+    }
+    
+    .rating {
+        top: 8px;
+        left: 8px;
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .popular-bg {
+        display: none;
+    }
+
+    #products {
+        padding: 20px 10px;
+    }
+    
+    #products h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+    
+    .product {
+        margin: 10px;
+    }
+
+    .products-bg {
+        display: none;
+    }
+
+    .category-filter {
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+    
+    .category-btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
