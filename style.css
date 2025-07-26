@@ -196,6 +196,10 @@ hr {
     padding: 20px;
     position: relative;
     z-index: 2;
+    background-image: url("/assets/popular-bg.png");
+    background-size: auto 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .popular-bg {
@@ -229,7 +233,7 @@ hr {
 }
 
 .popular img {
-    width: 100%;
+    width: 100px;
     height: 130px;
     object-fit: contain;
 }
@@ -298,6 +302,7 @@ hr {
     padding: 155px 20px;
     display: flex;
     align-items: center;
+   
 }
 
 .about-wrapper {
@@ -305,8 +310,11 @@ hr {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    padding-top: 40px;
+    padding: 40px 30px; /* Add more padding around content */
     gap: 100px;
+    background-image: url("/assets/dorange_polkadots_copyright.jpg");
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1); /* Subtle shadow */
 }
 
 .about-right, .about-left {
@@ -397,7 +405,7 @@ hr {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
@@ -612,7 +620,7 @@ hr {
     .popular {
         max-width: 100%;
         width: 100%;
-        max-width: 350px;
+        max-width: 300px;
     }
     
     hr {
@@ -620,7 +628,30 @@ hr {
     }
 
     .image-container {
-        margin: 20px auto 10px auto;
+        height: 120px;
+        width: 140px;
+        margin: 10px auto 8px auto;
+    }
+
+    .info {
+        padding: 10px;
+    }
+    
+    .info .title {
+        font-size: 1.1rem;
+        margin-left: 5px;
+    }
+    
+    .price {
+        padding: 4px 8px;
+        font-size: 0.9rem;
+    }
+    
+    .rating {
+        top: 6px;
+        left: 6px;
+        padding: 3px 6px;
+        font-size: 11px;
     }
 
     .popular-bg {
@@ -657,15 +688,15 @@ hr {
     }
     
     .products-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
     }
     
     .product {
-        max-width: 100%;
-        width: 100%;
-        max-width: 350px;
+        width: calc(50% - 10px);
+        max-width: 180px;
+        min-width: 150px;
     }
 
     .products-bg {
@@ -756,7 +787,10 @@ hr {
     }
     
     .product {
-        margin: 10px;
+        width: calc(50% - 8px);
+        max-width: 160px;
+        min-width: 140px;
+        margin: 5px;
     }
 
     .products-bg {
